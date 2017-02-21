@@ -20,6 +20,17 @@ $('.left-btn').on('click', function(e){
   console.log(h_scroll);
 });
 $('#search').on('click', function(e){
-    $('#page-1').fadeOut();
+    $('#page-1').hide();
+    console.log('Loading...');
+    var graph_div = document.getElementById('graph_div');
+    var ProtVista = require('ProtVista');
+    var instance = new ProtVista({
+      el: graph_div,
+      uniprotacc: $('#protein_id').val()
+    });
+    instance.getDispatcher().on("ready", function(obj) {
+        console.log('ready');
+        console.log(obj);
+    });
     $('#page-2').fadeIn();
 });

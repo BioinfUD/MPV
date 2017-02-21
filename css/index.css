@@ -16,6 +16,7 @@
 }
 .right-btn{
   float:right;
+  padding-right: 15px;
 }
 .buttons{
     position: fixed;
