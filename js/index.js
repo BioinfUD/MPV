@@ -10,12 +10,12 @@ window.onload = function() {
 var h_scroll = 0;
 console.log($('#container').width());
 $('.right-btn').on('click', function(e){
-  if(h_scroll < $('#container').width()) h_scroll += 50;
-  $('#container').scrollLeft( h_scroll );
+  if(h_scroll < 350) h_scroll += 50;
+  $('#container').animate({scrollLeft: h_scroll});
   console.log(h_scroll);
 });
 $('.left-btn').on('click', function(e){
   if(h_scroll > 0) h_scroll -= 50;
-  $('#container').scrollLeft( h_scroll );
+  $('#container').animate({scrollLeft: h_scroll});
   console.log(h_scroll);
 });

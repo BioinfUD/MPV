@@ -5,6 +5,7 @@
     position: relative;
     width: 100%;
     overflow-x: scroll;
+    margin-top: 35px;
 }
 .arrow-p{
   font-size: 30px !important;
@@ -15,4 +16,9 @@
 }
 .right-btn{
   float:right;
+}
+.buttons{
+    position: fixed;
+    top: 0px;
+    width: 100%;
 }
