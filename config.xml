@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.p3d" version="0.2.5" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>P3D</name>
+<widget id="com.phonegap.mpv" version="0.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>MPV</name>
     <description>
-        Search and Display 3D protein structures
+        Search and Display relevant protein annotations
     </description>
     <author email="bioinfud@gmail.com" href="http://bioinfud.com">
         Grupo de Bioinformatica de la Universidad Distrital Francisco Jose de Caldas

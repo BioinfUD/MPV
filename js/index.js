@@ -19,3 +19,7 @@ $('.left-btn').on('click', function(e){
   $('#container').animate({scrollLeft: h_scroll});
   console.log(h_scroll);
 });
+$('#search').on('click', function(e){
+    $('#page-1').fadeOut();
+    $('#page-2').fadeIn();
+});
