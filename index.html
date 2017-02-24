@@ -4,27 +4,33 @@
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, width=device-width" />
-    <!--<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">-->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1.0, width=device-width" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="css/fa/css/font-awesome.min.css" />
     <link href="css/protvista.css" rel="stylesheet"/>
-    <script src="js/protvista.js"></script>
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <title>P3D</title>
+    <link href="css/material.min.css" rel="stylesheet"/>
+    <title>MPV</title>
 </head>
 <body>
-    <div class="" id="page-1">
-        <input type="text" name="protein_id" id="protein_id"  value="" placeholder="Insert the UniProt ID here">
-        <button id="search">Buscar</button>
+    <div class="" id="page-1" style="margin: 0 auto;width: 400px;">
+        <div class="logo_img">
+            <img src="icon.png" alt="logo_MPV" />
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="protein_id">
+            <label class="mdl-textfield__label" for="protein_id">Insert the UniProt ID here</label>
+        </div>
+        <button id="search" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+            Graph
+        </button>
         <br>
-        <strong>EJEMPLOS:</strong>
-        <ul>
-            <li><a href="javascript:;" onclick="$('#protein_id').val('P05067');">P05067</a></li>
-            <li><a href="javascript:;" onclick="$('#protein_id').val('P04637');">P04637</a></li>
-            <li><a href="javascript:;" onclick="$('#protein_id').val('P63244');">P63244</a></li>
-            <li><a href="javascript:;" onclick="$('#protein_id').val('Q14524');">Q14524</a></li>
-        </ul>
+        <p>
+            <strong>EXAMPLES:</strong>
+        </p>
+        <button class="nz_ex_btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="$('#protein_id').focus();$('#protein_id').val('P05067');">P05067</button>
+        <button class="nz_ex_btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="$('#protein_id').focus();$('#protein_id').val('P04637');">P04637</button>
+        <button class="nz_ex_btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="$('#protein_id').focus();$('#protein_id').val('P63244');">P63244</button>
+        <button class="nz_ex_btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="$('#protein_id').focus();$('#protein_id').val('Q14524');">Q14524</button>
     </div>
     <div class="" id="page-2">
         <div class="buttons">
@@ -39,6 +45,9 @@
             <div id='graph_div' class="graph"></div>
         </div>
     </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/protvista.js"></script>
+    <script src="js/material.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>

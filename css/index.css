@@ -26,3 +26,10 @@
 #page-2{
     display: none;
 }
+.nz_ex_btn{
+    margin: 0 5px !important;
+}
+.logo_img{
+    text-align: center;
+    margin: 20px 0;
+}

@@ -1,12 +1,3 @@
-
-window.onload = function() {
-  var yourDiv = document.getElementById('graph_div');
-  var ProtVista = require('ProtVista');
-  var instance = new ProtVista({
-    el: yourDiv,
-    uniprotacc: 'P05067'
-  });
-}
 var h_scroll = 0;
 console.log($('#container').width());
 $('.right-btn').on('click', function(e){
@@ -30,7 +21,6 @@ $('#search').on('click', function(e){
     });
     instance.getDispatcher().on("ready", function(obj) {
         console.log('ready');
-        console.log(obj);
     });
     $('#page-2').fadeIn();
 });
