@@ -1,3 +1,16 @@
+body{
+    min-height: 0 !important;
+}
+footer {
+    background-color: #10b8af;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    font-size: 0.7em;
+    text-align: center;
+    font-weight: bold;
+    padding: 4px;
+}
 .graph{
     max-width: 100%;
 }
