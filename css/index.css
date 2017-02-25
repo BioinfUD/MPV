@@ -10,6 +10,15 @@ footer {
     text-align: center;
     font-weight: bold;
     padding: 4px;
+    z-index: 100;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 5px 5px;
+    width: 100%;
 }
 .graph{
     max-width: 100%;
@@ -48,4 +57,11 @@ footer {
 }
 #loading{
     display: none;
+}
+.nz_plus_btn{
+    float:right;
+    margin-right: 10px !important;
+}
+.nz_back_btn{
+    float:left;
 }

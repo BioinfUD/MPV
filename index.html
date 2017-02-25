@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/fa/css/font-awesome.min.css" />
     <link href="css/protvista.css" rel="stylesheet"/>
     <link href="css/material.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <title>MPV</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
         </div>
         <!-- SEARCH INPUT -->
         <div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <div class="mdl-textfield mdl-js-textfield">
                 <input class="mdl-textfield__input" type="text" id="protein_id">
                 <label class="mdl-textfield__label" for="protein_id">Insert the UniProt ID here</label>
             </div>
@@ -33,24 +34,40 @@
         </div>
         <div>
             <p><strong>EXAMPLES:</strong></p>
-            <button class="nz_ex_btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="$('#protein_id').focus();$('#protein_id').val('P05067');">P05067</button>
-            <button class="nz_ex_btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="$('#protein_id').focus();$('#protein_id').val('P04637');">P04637</button>
-            <button class="nz_ex_btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="$('#protein_id').focus();$('#protein_id').val('P63244');">P63244</button>
-            <button class="nz_ex_btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="$('#protein_id').focus();$('#protein_id').val('Q14524');">Q14524</button>
+            <button class="nz_ex_btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">P05067</button>
+            <button class="nz_ex_btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">P04637</button>
+            <button class="nz_ex_btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">P63244</button>
+            <button class="nz_ex_btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Q14524</button>
         </div>
     </div>
     <div class="" id="page-2">
-        <div class="buttons">
+        <header style="position: fixed;top: 0;left: 0;z-index: 100;width: 100%;">
+            <button class="nz_back_btn mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple">
+                <i class="material-icons">navigate_before</i>
+                <span class="mdl-button__ripple-container">
+                    <span class="mdl-ripple is-animating" style="width: 160.392px; height: 160.392px; transform: translate(-50%, -50%) translate(32px, 32px);">
+                    </span>
+                </span>
+            </button>
+            <button class="nz_plus_btn mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple">
+                <i class="material-icons">add</i>
+                <span class="mdl-button__ripple-container">
+                    <span class="mdl-ripple is-animating" style="width: 160.392px; height: 160.392px; transform: translate(-50%, -50%) translate(32px, 32px);">
+                    </span>
+                </span>
+            </button>
+        </header>
+        <div id="container">
+            <div id='graph_div' class="graph"></div>
+        </div>
+        <!--<div class="buttons">
             <div class="left-btn">
                 <p class="fa fa-arrow-left arrow-p"></p>
             </div>
             <div class="right-btn">
                 <p class="fa fa-arrow-right arrow-p"></p>
             </div>
-        </div>
-        <div id="container">
-            <div id='graph_div' class="graph"></div>
-        </div>
+        </div>-->
     </div>
     <footer>
         COPYRIGHT UNIVERSIDAD DISTRITAL  -  GRUPO DE INVESTIGACIÓN  GICOGE

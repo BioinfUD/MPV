@@ -22,6 +22,18 @@ $('#search').on('click', function(e){
         setTimeout(function () {
             $('#page-1').hide();
             $('#page-2').fadeIn();
-        }, 2000);
+            $('#loading').hide();
+        }, 1000);
     });
+});
+
+$('.nz_ex_btn').on('click', function(e){
+    var p_id = $(this).text();
+    $('#protein_id').focus();
+    $('#protein_id')[0].parentElement.MaterialTextfield.change(p_id);
+});
+$('.nz_back_btn').on('click',function(e){
+    $('#protein_id').val('');
+    $('#page-2').hide();
+    $('#page-1').fadeIn();
 });
