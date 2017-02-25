@@ -11,8 +11,7 @@ $('.left-btn').on('click', function(e){
   console.log(h_scroll);
 });
 $('#search').on('click', function(e){
-    $('#page-1').hide();
-    console.log('Loading...');
+    $('#loading').fadeIn();
     var graph_div = document.getElementById('graph_div');
     var ProtVista = require('ProtVista');
     var instance = new ProtVista({
@@ -20,7 +19,9 @@ $('#search').on('click', function(e){
       uniprotacc: $('#protein_id').val()
     });
     instance.getDispatcher().on("ready", function(obj) {
-        console.log('ready');
+        setTimeout(function () {
+            $('#page-1').hide();
+            $('#page-2').fadeIn();
+        }, 2000);
     });
-    $('#page-2').fadeIn();
 });
