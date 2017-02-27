@@ -181,10 +181,12 @@
           </div>
       </header>
       <div class="sequence">
-          <textarea id="sequence" onClick="javascript:this.form.text_area.focus();this.form.text_area.select();">
-          </textarea>
-
-
+          <div id="sequence" onclick="copyToClipboard('sequence')">
+          </div>
+          <div id="toast" class="mdl-js-snackbar mdl-snackbar">
+              <div class="mdl-snackbar__text"></div>
+              <button class="mdl-snackbar__action" type="button"></button>
+          </div>
       </div>
     </div>
 

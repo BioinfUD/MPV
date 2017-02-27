@@ -3,16 +3,6 @@ var ProtVista = require('ProtVista');
 var dialog = document.querySelector('dialog');
 dialogPolyfill.registerDialog(dialog);
 
-/*$('.right-btn').on('click', function(e){
-  if(h_scroll < 350) h_scroll += 50;
-  $('#container').animate({scrollLeft: h_scroll});
-  console.log(h_scroll);
-});
-$('.left-btn').on('click', function(e){
-  if(h_scroll > 0) h_scroll -= 50;
-  $('#container').animate({scrollLeft: h_scroll});
-  console.log(h_scroll);
-});*/
 $('#search').on('click', function(e){
   var prot_id = $('#protein_id').val();
   if( prot_id == ''){
@@ -41,8 +31,7 @@ function loadGraph(prot_id){
 }
 
 function loadPublications(prot_id){
-    var url = 'http://www.uniprot.org/uniprot/'+prot_id+'.xml'
-    console.log('consultando url: '+url);
+    var url = 'http://www.uniprot.org/uniprot/'+prot_id+'.xml';
     $.get(url, function(data, status){
         var seq = $(data).find('sequence').text();
         $('#sequence').text('');
@@ -100,7 +89,14 @@ $('.nz_seq').on('click', function(e) {
   $('#page-3').hide();
   $('#page-4').fadeIn();
 });
-$('#sequence').on('click', function(){
-    console.log('click')
-    $(this).select();
-});
+function copyToClipboard(elementId) {
+  var aux = document.createElement("input");
+  aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+  document.body.appendChild(aux);
+  aux.select();
+  document.execCommand("copy");
+  document.body.removeChild(aux);
+  var snackbarContainer = document.querySelector('#toast');
+  var data = {message: 'Text has been copied to clipboard.'};
+  snackbarContainer.MaterialSnackbar.showSnackbar(data);
+}

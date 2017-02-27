@@ -94,13 +94,14 @@ header{
   font-weight: bolder;
 }
 .sequence{
-    width: 95%;
-    margin: 70px auto 40px;
+
 }
 #sequence{
-    width: 100%;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    height: 210px;
+    width: 95%;
+    margin: 70px auto 40px;
     font-size: 12px;
+    font-family: monospace;
+}
+#toast{
+    z-index: 200;
 }
