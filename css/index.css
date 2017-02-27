@@ -65,3 +65,9 @@ header{
 .nz_back_btn{
     float:left;
 }
+#extra_info{
+    display: none;
+    position: fixed;
+    top: 65px;
+    right: 5px;
+}
