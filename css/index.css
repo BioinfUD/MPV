@@ -51,6 +51,9 @@ header{
 #page-3{
     display: none;
 }
+#page-4{
+    display: none;
+}
 .nz_ex_btn{
     margin: 0 5px !important;
 }
@@ -61,14 +64,14 @@ header{
 #loading{
     display: none;
 }
-.nz_plus_btn{
+.nz_plus_btn, .nz_plus_btn_p3, .nz_plus_btn_p4{
     float:right;
     margin-right: 10px !important;
 }
 .nz_back_btn{
     float:left;
 }
-#extra_info{
+.extra_info{
     display: none;
     position: fixed;
     top: 65px;
@@ -89,4 +92,15 @@ header{
 #pub_table th {
   font-size: 14px;
   font-weight: bolder;
+}
+.sequence{
+    width: 95%;
+    margin: 70px auto 40px;
+}
+#sequence{
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 210px;
+    font-size: 12px;
 }

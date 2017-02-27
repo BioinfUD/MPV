@@ -44,7 +44,9 @@ function loadPublications(prot_id){
     var url = 'http://www.uniprot.org/uniprot/'+prot_id+'.xml'
     console.log('consultando url: '+url);
     $.get(url, function(data, status){
-        console.log("Status: " + status);
+        var seq = $(data).find('sequence').text();
+        $('#sequence').text('');
+        $('#sequence').text(seq.replace(/(.{10})/g,"$1  "));
         var cont = 1;
         $.each($(data).find('reference'), function () {
             var title = $(this).find('title').text();
@@ -71,10 +73,34 @@ $('.nz_back_btn').on('click',function(e){
     $('#page-2').hide();
     $('#page-1').fadeIn();
 });
+$('.nz_back_btn_2').on('click',function(e){
+    $('#page-3').hide();
+    $('#page-2').fadeIn();
+});
+$('.nz_back_btn_3').on('click',function(e){
+    $('#page-4').hide();
+    $('#page-2').fadeIn();
+});
 $('.nz_plus_btn').on('click', function(){
-    $('#extra_info').fadeToggle();
+    $('#extra_info_p2').fadeToggle();
+});
+$('.nz_plus_btn_p3').on('click', function(){
+    $('#extra_info_p3').fadeToggle();
+});
+$('.nz_plus_btn_p4').on('click', function(){
+    $('#extra_info_p4').fadeToggle();
 });
 $('.nz_pubs').on('click', function(e) {
   $('#page-2').hide();
+  $('#page-4').hide();
   $('#page-3').fadeIn();
+});
+$('.nz_seq').on('click', function(e) {
+  $('#page-2').hide();
+  $('#page-3').hide();
+  $('#page-4').fadeIn();
+});
+$('#sequence').on('click', function(){
+    console.log('click')
+    $(this).select();
 });
