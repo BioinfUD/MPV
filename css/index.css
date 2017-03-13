@@ -105,3 +105,6 @@ header{
 #toast{
     z-index: 200;
 }
+a{
+    color: #019 !important;
+}
