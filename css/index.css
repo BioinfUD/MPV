@@ -10,8 +10,12 @@ html, body {
 
 .graph {
   max-height: 85vh;
-  overflow: auto;
+  overflow: scroll;
   -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+}
+svg {
+    overflow: auto !important;
 }
 footer {
     background-color: #10b8af;
@@ -32,12 +36,9 @@ header{
     padding: 5px 5px;
     width: 100%;
 }
-.graph{
-    max-width: 100%;
-}
 #container {
     width: 100%;
-    overflow: auto;
+    overflow: scroll;
     margin-top: 35px;
 }
 .arrow-p{
