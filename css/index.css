@@ -36,9 +36,8 @@ header{
     max-width: 100%;
 }
 #container {
-    position: relative;
     width: 100%;
-    overflow-x: scroll;
+    overflow: auto;
     margin-top: 35px;
 }
 .arrow-p{
