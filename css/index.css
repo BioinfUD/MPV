@@ -1,6 +1,13 @@
 body{
     min-height: 0 !important;
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
 footer {
     background-color: #10b8af;
     width: 100%;
